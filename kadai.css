@@ -1,0 +1,274 @@
+/* 全体の幅と間隔の調整*/
+body {
+  margin: 0px;
+  max-width: 2000px;
+}
+
+.Top {
+  height: 280px;
+  background-color: rgb(207, 39, 109);
+  padding-left: 60px;
+
+  margin: auto;
+
+}
+
+h1 {
+  font-size: 120px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  color: whitesmoke;
+  padding-top: 70px;
+}
+
+.header1 {
+  height: 1000px;
+}
+
+
+.menu {
+  font-size: 70px;
+  padding: 30px;
+  color: snow;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: auto;
+  background-color: orange;
+
+}
+
+
+
+.accordion {
+  height: 1200px;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: snow;
+  list-style: none;
+  background-color: rgb(65, 173, 32)
+}
+
+
+
+/*cursorでポインターに変わるように変更*/
+.btn--orange {
+  height: 60px;
+  width: 120px;
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/*cursorでポインターに変わるように変更*/
+.btn--orange1 {
+  height: 60px;
+  width: 200px;
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/*クリックした際に要素の影を消す*/
+.btn--orange:active {
+  box-shadow: none;
+
+}
+
+/*クリックした際に要素の影を消す*/
+.btn--orange1:active {
+  box-shadow: none;
+
+}
+
+/*カーソルが重なった際に色を変更*/
+.btn--orange:hover {
+  color: #fff;
+  background: #e96303ef;
+  border-bottom: 2px solid #b84c00;
+}
+
+/*カーソルが重なった際に色を変更*/
+.btn--orange1:hover {
+  color: #fff;
+  background: #e96303ef;
+  border-bottom: 2px solid #b84c00;
+}
+
+/*影の部分の詳細*/
+.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+
+
+.stay {
+  padding-left: 30px;
+}
+
+.up {
+  padding-left: 30px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*display: flex;で配列を横並びに*/
+section {
+  display: flex;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+/*親要素に干渉を防ぐためborder-boxで調整*/
+.up {
+  width: 2000px;
+  height: 200px;
+  box-sizing: border-box;
+
+}
+
+
+/*transtionでup内の文章を1秒で終始緩やかに動きをつける。*/
+.up {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/*文章を元の透過度に戻す。*/
+.up.show {
+  opacity: 1;
+  transform: none;
+}
+
+/*文章をY軸に100px移動*/
+.op {
+  transform: translate(0, 100px);
+}
+
+
+
+.backimage {
+  height: 700px;
+  background-image: url(https://bluegreen.jp/wp-content/uploads/2019/07/IMG_5241.jpg);
+  background-size: cover;
+  opacity: 1;
+  margin-top: 345px;
+  padding-top: 350px;
+  font-family: 'Hind', sans-serif;
+  font-size: 70px;
+  color: snow;
+  text-align: center;
+
+
+}
+
+/*ブラーをつけて5秒かけてspan全体をtransparentで透明にする。*/
+span {
+  color: transparent;
+  animation: blur 5s ease-out infinite;
+  -webkit-animation: blur 5s ease-out infinite;
+}
+
+/*1から5までの子にそれぞれ、アニメーションが発動する時間をdelayで個別にずらして設定*/
+span:nth-child(1) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+span:nth-child(2) {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+span:nth-child(3) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+span:nth-child(4) {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+span:nth-child(5) {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+/*＠keyframesでブラーの効果の詳細を始まりから終わりまで指定。*/
+@keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  80% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+}
+
+/*@-webkit-keyframesでブラーの効果の詳細を始まりから終わりまで指定。*/
+@-webkit-keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  80% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+}
